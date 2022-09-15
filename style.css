@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+/* Main navbar design */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li a {
+    display: block;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    background: var(--bg-nav);
+    color: var(--text2);
+    position: relative;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+
+/* MAIN HEADER + IMAGE*/
+header {
+    padding: 0;
+    background: var(--header);
+    text-align: left;
+
+    background-image: url("images/disney-hall-main.jpg");
+    background-repeat: none;
+    overflow: hidden; /* helps fix issue when using float */
+    background-attachment: fixed; /* adds parallax effect to text */
+    background-position: 50% 30%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    font-size: 7em;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(34, 38, 38);
+    padding-left: 40px;
+}
+
+/* MAIN CONTENT */
+section {
+    align-items: left;
+    padding: 20px 40px;
+    margin: 0;
+    clear: left;
+    list-style-position: inside;
+}
+
+section h1 {
+    text-decoration: underline;
+}
+
+section p {
+    padding-top: 5px;
+}
+
+.interview-right {
+    width: 70%;    
+}
+
+section .container {
+    min-height: 465px;
+}
+
+section .right {
+    display: block;
+    width: 49%;
+    float: left;
+    min-height: 400px;
+}
+
+section .right li {
+    padding-bottom: 10px;
+}
+
+section .left {
+    display: block;
+    list-style-position: outside;
+    width: 50%;
+    float: right;
+    min-height: 400px;
+}
+
+.cite {
+    width: 80%;
+}
+
+/* COLORS */
+:root {
+    --light1: #c1e0e7;
+    --light2: #67b8e0;
+    --light3: #d8e8f2;
+    --light4: #78c9ef;
+}
+
+.light {
+    --bg: var(--light3);
+    --bg-nav: linear-gradient(to right, var(--light1), var(--light2));
+    --text: var(--black);
+    --text2: var(--black);
+    --header: var(--light2);
+    --scroll: var(--light4);
+}
+
+.checked {
+    color: orange;
+}
+
+/* FOOTER */
+footer {
+    padding: 15px;
+    background-color: var(--header);
+}
+
+
+/* SCROLLBAR */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+    border: 1px solid var(--bg);
+}   
